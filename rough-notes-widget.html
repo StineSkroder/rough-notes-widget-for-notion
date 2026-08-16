@@ -19,8 +19,8 @@
     box-sizing: border-box;
     width: 100vw;
     height: 100vh;
-    background: #ffffff;
-    border: 1px solid #e6e6e6;
+    background: transparent;
+    border: 1px solid rgba(128, 128, 128, 0.28);
     border-radius: 12px;
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@
     display: flex;
     align-items: center;
     padding: 10px 16px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.18);
     flex-shrink: 0;
   }
 
@@ -40,7 +40,7 @@
     align-items: center;
     justify-content: flex-end;
     padding: 6px 16px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid rgba(128, 128, 128, 0.18);
     flex-shrink: 0;
   }
 
@@ -51,15 +51,16 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: #6b6b6b;
+    color: #8a8a8a;
     font-size: 14px;
     padding: 4px 6px;
     border-radius: 6px;
+    transition: background 0.1s ease, color 0.1s ease;
   }
 
   .clear-btn:hover {
-    background: #f4f4f4;
-    color: #333;
+    background: rgba(128, 128, 128, 0.14);
+    color: #444;
   }
 
   .clear-btn:focus {
@@ -74,7 +75,7 @@
   }
 
   .counts b {
-    color: #6b6b6b;
+    color: #7a7a7a;
     font-weight: 600;
   }
 
@@ -101,6 +102,34 @@
 
   .note-area::placeholder {
     color: #b3b3b3;
+  }
+
+  /* --- adapt to dark mode --- */
+  @media (prefers-color-scheme: dark) {
+    .note-area {
+      color: #e8e8e8;
+    }
+
+    .note-area::placeholder {
+      color: #7a7a7a;
+    }
+
+    .clear-btn {
+      color: #b0b0b0;
+    }
+
+    .clear-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #f0f0f0;
+    }
+
+    .counts {
+      color: #8a8a8a;
+    }
+
+    .counts b {
+      color: #bdbdbd;
+    }
   }
 </style>
 </head>
