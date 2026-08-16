@@ -30,9 +30,17 @@
   .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 10px 16px;
     border-bottom: 1px solid #eee;
+    flex-shrink: 0;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 6px 16px;
+    border-top: 1px solid #eee;
     flex-shrink: 0;
   }
 
@@ -103,11 +111,13 @@
     <button class="clear-btn" id="clearBtn" title="Clear notes">
       🧹 Clear
     </button>
+  </div>
+  <textarea class="note-area" id="noteArea" placeholder="Type your rough notes here..."></textarea>
+  <div class="footer">
     <div class="counts">
       <b id="wordCount">0</b> words &nbsp; <b id="charCount">0</b> chars
     </div>
   </div>
-  <textarea class="note-area" id="noteArea" placeholder="Type your rough notes here..."></textarea>
 </div>
 
 <script>
